@@ -1901,9 +1901,11 @@ input, select, textarea {
 	width: 80%;
 	max-width: 700px;
 	text-align: center;
-	color: #ccc;
+	color: rgb(252, 252, 252);
+	border-color: black;
 	padding: 10px 0;
 	height: 150px;
+	delay
   }
   
   /* Add Animation - Zoom in the Modal */
@@ -1942,6 +1944,40 @@ input, select, textarea {
 	  width: 100%;
 	}
   }
+
+  
+  html, body {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+#hideMe {
+    -moz-animation: cssAnimation 0s ease-in 7s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 7s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 7s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 7s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
 
 /* Sections/Article */
 
